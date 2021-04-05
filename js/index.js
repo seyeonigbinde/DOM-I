@@ -50,7 +50,8 @@ links[2].textContent = siteContent["nav"]["nav-item-3"]
 links[3].textContent = siteContent["nav"]["nav-item-4"]
 links[4].textContent = siteContent["nav"]["nav-item-5"]
 links[5].textContent = siteContent["nav"]["nav-item-6"]
-console.log(links);
+//updating the links to Green
+links.forEach(item => item.style.color = 'green')
 
 //Updating the Header
 const header = document.querySelectorAll('.cta_text')
@@ -101,3 +102,16 @@ contactText[2].textContent = siteContent["contact"]["email"]
 const footerText = document.querySelector('footer')
 document.querySelector('footer').textContent = siteContent["footer"]["copyright"]
 
+//Adding two new links
+const blogLink = document.createElement('a')
+blogLink.textContent = 'Blog'
+blogLink.href = '#'
+blogLink.classList.add('nav')
+document.querySelector('nav').appendChild(blogLink)
+
+
+const homeLink = document.createElement('a')
+homeLink.textContent = 'Home'
+homeLink.href = '#'
+homeLink.classList.add('nav')
+document.querySelector('nav').prepend(homeLink)
