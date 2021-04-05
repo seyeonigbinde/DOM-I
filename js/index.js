@@ -40,3 +40,78 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Updating the Links
+  
+const links = document.querySelectorAll("nav a")
+links[0].textContent = siteContent["nav"]["nav-item-1"]
+links[1].textContent = siteContent["nav"]["nav-item-2"]
+links[2].textContent = siteContent["nav"]["nav-item-3"]
+links[3].textContent = siteContent["nav"]["nav-item-4"]
+links[4].textContent = siteContent["nav"]["nav-item-5"]
+links[5].textContent = siteContent["nav"]["nav-item-6"]
+//updating the links to Green
+links.forEach(item => item.style.color = 'green')
+
+//Updating the Header
+const header = document.querySelectorAll('.cta_text')
+document.querySelector('h1').textContent = siteContent["cta"]["h1"]
+
+//Updating the Button
+const headerButton = document.querySelector('.cta_text')
+document.querySelector('button').textContent = siteContent["cta"]["button"]
+
+//Updating the Image
+const headerImg = document.querySelector('#cta-img')
+headerImg.src = siteContent["cta"]["img-src"]
+
+//Updating the Body
+const bodyMain = document.querySelector('.top-content')
+const bodyHeader = bodyMain.querySelectorAll('h4')
+const bodyText = bodyMain.querySelectorAll('p')
+bodyHeader[0].textContent = siteContent["main-content"]["features-h4"]
+bodyHeader[1].textContent = siteContent["main-content"]["about-h4"]
+bodyText[0].textContent = siteContent["main-content"]["features-content"]
+bodyText[1].textContent = siteContent["main-content"]["about-content"]
+
+//Updating the Body Image
+const bodyImg = document.querySelector('.middle-img')
+bodyImg.src = siteContent["main-content"]["middle-img-src"]
+
+//Updating the Body Bottom
+const bottomMain = document.querySelector('.bottom-content')
+const bottomHeader = bottomMain.querySelectorAll('h4')
+const bottomText = bottomMain.querySelectorAll('p')
+bottomHeader[0].textContent = siteContent["main-content"]["services-h4"]
+bottomHeader[1].textContent = siteContent["main-content"]["product-h4"]
+bottomHeader[2].textContent = siteContent["main-content"]["vision-h4"]
+bottomText[0].textContent = siteContent["main-content"]["services-content"]
+bottomText[1].textContent = siteContent["main-content"]["product-content"]
+bottomText[2].textContent = siteContent["main-content"]["vision-content"]
+
+//Updating the Contact
+const contactMain = document.querySelector('.contact')
+const contactHeader = contactMain.querySelectorAll('h4')
+const contactText = contactMain.querySelectorAll('p')
+contactHeader[0].textContent = siteContent["contact"]["contact-h4"]
+contactText[0].textContent = siteContent["contact"]["address"]
+contactText[1].textContent = siteContent["contact"]["phone"]
+contactText[2].textContent = siteContent["contact"]["email"]
+
+//Updating the Button
+const footerText = document.querySelector('footer')
+document.querySelector('footer').textContent = siteContent["footer"]["copyright"]
+
+//Adding two new links
+const blogLink = document.createElement('a')
+blogLink.textContent = 'Blog'
+blogLink.href = '#'
+blogLink.classList.add('nav')
+document.querySelector('nav').appendChild(blogLink)
+
+
+const homeLink = document.createElement('a')
+homeLink.textContent = 'Home'
+homeLink.href = '#'
+homeLink.classList.add('nav')
+document.querySelector('nav').prepend(homeLink)
